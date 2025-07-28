@@ -1,5 +1,3 @@
-
-
 from flask import Flask, g, escape, session, redirect, render_template, request, jsonify, Response
 from Misc.functions import *
 
@@ -15,7 +13,7 @@ DAO = DAO(app)
 from routes.user import user_view
 from routes.book import book_view
 from routes.admin import admin_view
-from routes.about import about_view
+#from routes.about import about_view
 
 # Registering custom functions to be used within templates
 app.jinja_env.globals.update(
@@ -26,7 +24,7 @@ app.jinja_env.globals.update(
 app.register_blueprint(user_view)
 app.register_blueprint(book_view)
 app.register_blueprint(admin_view)
-app.register_blueprint(about_view)
+#app.register_blueprint(about_view)
 
 #@app.route('/about')
 #def about():
